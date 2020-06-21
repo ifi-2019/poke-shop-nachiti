@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+
+    <ul class="navbar-nav mr-auto">
+
+        <li class="nav-item">
+            <a class="nav-link" href="/wallet">
+                Porte-Monnaie
+            </a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="/backpack">
+                Sac à dos
+            </a>
+        </li>
+
+        <li class="nav-item">
+            <a class="nav-link" href="/shop-api/products">
+                Boutique
+            </a>
+        </li>
+
+        <li class="nav-item">
+            <a class="nav-link" href="/shop-api/history">
+                Historique
+            </a>
+        </li>
+    </ul>
+
+
+    <span class="navbar-text mr-md-3">Welcome {{name}}</span>
+
+    <form class="form-inline" action="/logout" method="post">
+        <input type="submit" class="btn btn-outline-warning my-2 my-sm-0" value="Sign Out"/>
+        <input type="hidden" name="{{_csrf.parameterName}}" value="{{_csrf.token}}"/>
+    </form>
+
+</nav>

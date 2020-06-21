@@ -1,0 +1,25 @@
+{{> layout/header}}
+
+<body >
+{{> layout/navbar}}
+<div class="container">
+    <h1 class="pt-md-3 pb-md-3">Historique</h1>
+    <div class="card-deck">
+        {{#products}}
+        <div class="col-md-4">
+            <div class="card shadow-sm mb-4">
+                <div class="card-header">
+                    <h4 class="my-0 font-weight-normal">{{productId}}</h4>
+                </div>
+                <div class="card-body">
+                    <span class="badge badge-primary">Prix : {{price}}</span>
+                    <span class="badge badge-primary">Description : {{label}}</span>
+                    <span class="badge badge-primary">date d'achat : {{date}}</span>
+                </div>
+            </div>
+        </div>
+        {{/products}}
+    </div>
+</div>
+</body>
+</html>

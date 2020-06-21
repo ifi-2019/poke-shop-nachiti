@@ -1,0 +1,21 @@
+{{> layout/header}}
+
+<body >
+{{> layout/navbar}}
+
+<form  method="post" action="/wallet" >
+    <div class="form-group">
+        <label for="euro">Recharger des pokeDeollar:</label>
+        <input type="number" class="form-control" id="euro" name="euro" aria-describedby="trainerHelp" placeholder="Euro">
+        <input type="hidden" name="{{_csrf.parameterName}}" value="{{_csrf.token}}"/>
+        <small id="trainerHelp" class="form-text text-muted">Entrez la valeur que vous souhaitez!</small>
+    </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+</form>
+</div>
+
+</div>
+</div>
+
+</body>
+</html>
